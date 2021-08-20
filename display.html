@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>display</title>
+	<style >
+		.info{
+			position: absolute;
+			width: 0%;
+			height: 200px;
+			left: 500px;
+			background:red;
+			display: block;
+			transition: all	1s;
+
+		}
+		.cerrar{
+			position: absolute;
+			width: 0px;
+			height: 20px;
+			left: 150px;
+			background:blue;
+			display:block;
+			transition: all	0.1s 0.5s;
+		}
+		.abrir{
+			position: absolute;
+			width: 100px;
+			height: 40px;
+			left: 600px;
+			top: 500px;
+			background:blue;
+			display:block;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="info" id="info1">
+		<div class="cerrar" id="cerra1" onmousemove="cer()"></div>
+	</div>
+
+	<div class="abrir" onclick="hola()"></div>
+	<script>
+			function hola(){
+			info1.style.width=50+"%";
+			cerra1.style.width=60+"px";
+			cerra1.style.transition="all 0.1s 0.5s";
+			}
+			function cer(){
+			info1.style.width=0+"px";
+			cerra1.style.width=0+"px";
+			cerra1.style.transition="all 0.01s 0.1s";
+			}
+
+	</script>
+
+</body>
+</html>
